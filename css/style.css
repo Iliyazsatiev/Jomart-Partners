@@ -1,0 +1,964 @@
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+body{
+    padding: 0;
+    margin:0;
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+.phone a:hover{
+    transition: 0.2s ease-in-out;
+    color: #f2bc15;
+    text-decoration: none;
+}
+nav{
+    display: inline-flex;
+/*    background:linear-gradient(to top,rgba(255,255,255,0.3),black);*/
+    background: black;
+    height: 120px;
+    position:sticky;
+    top:0;
+    z-index: 99;
+}
+.btnread,.btnread:hover{
+    text-decoration: none;
+    color: black;
+    border-left:2px solid #f2bc15;
+    top: 10px;
+    font-weight: bold;
+}
+.btnread{
+    padding: 15px;
+    background-color:#ececec;
+}
+.btnread:hover{
+    transition: 0.2s linear;
+    background-color: #f2bc15;
+}
+.navscroll{
+    transition: 0.2s ease-in-out;
+    background-color: black!important;
+}
+nav a img{
+    width: 100px;
+    height: 120px;
+    border:3px solid #f2bc15;
+}
+nav ul{
+    list-style-type: none;
+    display: inline-flex;
+    right:2em;
+    top:80px;
+    position: absolute;
+}
+nav ul li a{
+    color: white;
+    margin-right: 50px;
+    margin-right: 50px;
+    font-weight: 680;
+}
+nav ul li a:hover{
+    color: #f2bc15; 
+    transition: 0.25s ease-in-out;
+    text-decoration: none;
+    border-bottom: 4px solid #f2bc15; 
+}
+.phone{
+    display: inline-flex;
+    right: 2em;
+    transform:translateY(50%);
+    position: absolute;
+    align-items: center;
+    margin: 0 4em 0 0;
+}
+.tel{
+    font-weight: 600;
+    align-items: center;
+    display: inline-flex;
+    font-size: 30px;
+    color: #f2bc15;
+}
+.search i{
+    font-size: 18px;
+    margin-left: 15px;
+    padding: 10px;
+    border: 3px solid #d9d9d9;
+}
+.search{
+    font-size: 18px;
+    margin-left: 15px;
+    width: 45px;
+    height: 42px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+    padding: 15px;
+}
+.search i:hover{
+    border-color:#f2bc15;
+    color:#f2bc15;
+    transition:0.2s ease-in-out; 
+}
+
+.menu-btn {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255,255,255,0.1);
+  position: relative;
+  border:3px solid #d9d9d9; 
+  margin-top:5px; 
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+.menu-btn span::before {
+  transform: translateY(-5px);
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+
+.menu-btn_active span:before {
+  transform: rotate(-35deg);
+
+}
+.menu-btn_active span{
+    height: 0;
+}
+.menu-btn_active span:after {
+  transform: rotate(35deg);
+}
+.menu_active{
+    right:0!important;
+    transition: 0.2s ease-in-out;
+}
+.menu_deactive{
+    right:-600px!important;
+    transition: 0.2s ease-in-out;
+}
+#menu{
+    width: 80vh;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    color: #adaaad;
+    font-size: 2em;
+    right:-600px;
+    background:#f2bc15;
+    transition: all ease 0.5s;
+    z-index: 100;
+    
+}
+#menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+#menu ul {
+    padding-top: 30px;
+}
+#menu ul li{
+    list-style-type: none;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 10px;
+}
+#burger{
+    display: none;
+    position: relative;
+    line-height: 50px;
+}
+.phone .tel:hover{
+    color:white;
+    transition:0.2s ease-in-out; 
+    text-decoration: none;
+}
+.phone i{
+    margin-right: 15px;
+    color: white;
+    font-size: 1.2rem;
+}
+.phone .telbefore{
+    width: 4px;
+    content: '';
+    height: 40px;
+    display: block;
+    transform: translateY(-50%);
+    background: #c7c7c7;
+    position: absolute;
+    top: 50%;
+    left:25px;
+}
+.border-bottom{
+    display: none;
+    width: 50%;
+    margin: 0 0 30px 30px;
+    height: 4px;
+    background-color: #f2bc15;
+}
+.border-bottom:hover{
+    display: block;
+}
+nav ul a:hover::after{
+    border-bottom: 3px solid #f2bc15;
+}
+.bd-example1{
+    top:0;
+    position: relative;
+}
+#carouselExampleIndicators{
+    z-index: -1;
+}
+.main{
+    background-image:url(../img/bg-Mramor.jpg);
+}
+.aboutus-content::before{
+    width: 5px;
+    content: '';
+    height: 225px;
+    display: block;
+    background: #f5c00c;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+#imgaboutus img{
+    height: 325px;
+    width:485px;
+    box-shadow: 5px 5px 5px #f5c00c;
+}
+.bd-examplea:hover{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+.lawyersatt{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap:30px;
+}
+
+.partnersrow .lawyersatt::before{
+    display: none;
+}
+.lawyersattgap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap:5px;
+    margin-left: 30px;
+}
+.attsun img{
+    height:100%;
+    width: 100%;
+}
+.rowservices div{
+    height: 400px;
+}
+.lawyersatt::before{
+    width: 5px;
+    content: '';
+    height: 505px;
+    display: block;
+    background: #f5c00c;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+}
+
+.partnersab::before{
+    width: 5px;
+    content: '';
+    height: 505px;
+    display: block;
+    background: #f5c00c;
+    position: absolute;
+    top: 5px;
+    left: -5px;
+}
+.untext{
+    color: black;
+    text-decoration: none;
+}
+.attsun .imgs span:hover{
+    color:black;
+    text-decoration:none;
+    background-color: #f5c00c;
+    transition: all ease 0.5s; 
+}
+.attsun .imgs .untext:hover{
+    color: black;
+    text-decoration: none;
+}
+.attsun .imgs span{
+    display: block;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 1.5px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 8px 5px;
+    position: relative;
+    border-bottom: 4px solid #f5c00c;
+}
+.navbar-brand img{
+	width: 5em;
+}
+.carousel-item img{
+	height: 100vh;
+}
+.carousel-caption{
+	position: absolute;
+	top:35%; 
+	text-transform: uppercase;
+}
+.carousel-caption h5{
+	color: white;
+}
+.carousel-caption p{
+	font-size: 1.8em;
+	color: white;
+}
+.carousel-caption a{
+    padding: 12px;
+    border:5px solid white;
+    color: white;
+    font-size: 1.4em;
+}
+.servsinfo::before{
+    width: 5px;
+    content: '';
+    height: 505px;
+    display: block;
+    background: #f5c00c;
+    position: absolute;
+    top: 5px;
+    left: -5px;
+}
+.servs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto;
+    grid-gap:10px;
+}
+.servs div img{
+    height: 270px;
+}
+
+.bd-example a:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+.imgs:hover{
+    text-decoration: none;
+}
+.services{
+    background: url(../img/bg-light.jpg) repeat;
+    padding: 50px;
+}
+.arrows{
+    display: inline-flex;
+}
+.lawyersattgap div{
+    width: 270px;
+}
+.ourprices{
+    background: url(../img/ourprices.jpg) center/cover no-repeat;
+    padding: 5em;
+}
+.ourprices h1{
+    color: #f5c00c;
+}
+.ourprices p{
+    color: white;
+    font-size: 1.2em!important;
+}
+footer{
+	background-color: #ececec;
+	color: white;
+	height: 100%;
+}
+footer p,a{
+	color: white;
+}
+footer a:hover{
+	color: white;
+    transition: all ease 0.5s;
+}
+footer .container{
+	padding: 1.8em;
+}
+.texti{
+	margin: auto;
+}
+.texti i{
+	font-size: 2.8em;
+	margin: 0.2em;
+    color: black;
+}
+.texti i:hover{
+    color: #f5c00c;
+    transition: all ease 0.5s;
+}
+.border2{
+	height: 5px;
+	width: 100%;
+	background-color: #f5c00c; 
+	margin: auto;
+	border: 1px solid  #f5c00c;
+}
+.footer-inline{
+    display: inline-flex;
+    align-items: center;
+}
+.footerlogo{
+    width: 60px;
+    height: 80px;
+    border:3px solid #f2bc15;
+    margin-left: 5em;
+}
+footer .tel:hover{
+    color:black;
+    transition:0.2s ease-in-out; 
+    text-decoration: none;
+}
+footer p{
+    color: black;
+    font-weight: 100;
+}
+footer p:hover{
+    color: #f2bc15;
+    transition: 0.2s ease-in-out;
+}
+.linefooter::after{
+    content: '';
+    width: 1px;
+    height: 26px;
+    background: black;
+    margin-left:22px;
+}
+
+.footer-p{
+    display: none;
+}
+
+/*THE FIRM*/
+.thefirmphoto{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background:url(../img/our-firm.jpg);
+    background-size: cover;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 135px;
+    padding-bottom: 20px;
+}
+.thefirmphoto h1,.thefirmphoto h2,.thefirmphoto .h2 {
+    width: 53.1%;
+    font-weight: 600;
+    line-height: 0.85;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5c00c;
+    font-family: "Hind", sans-serif;
+    font-size: 70px;
+    position: relative;
+    padding-left: 45px;
+}
+.animated{
+opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+transition: 0.5s; /*Скорость перехода состояния элемента*/
+animation: show 0.5s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.5s; /* Задержка перед началом */
+}
+.thefirmphoto h1::before {
+    width: 5px;
+    content: '';
+    height: 170px;
+    display: block;
+    background: #f5c00c;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.ourfirm{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('../img/our-firm-city.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin: 0;
+    
+}
+.ourfirm p{
+    font-size:1.5em;
+}
+.aboutuslist{
+    background-color:#f5c00c;
+    color: white;
+    padding: 10px;
+}
+.aunormal{
+    color:#f5c00c;
+}
+@keyframes show{
+0%{
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+
+/*SERVICES*/
+.servphoto{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background:url(../img/banner-services.jpg);
+    background-size: cover;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 135px;
+    padding-bottom: 20px;
+}
+.servphoto h1{
+    width: 53.1%;
+    font-weight: 600;
+    line-height: 0.85;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5c00c;
+    font-family: "Hind", sans-serif;
+    font-size: 70px;
+    position: relative;
+    padding-left: 45px;
+}
+.servphoto h1::before {
+    width: 5px;
+    content: '';
+    height: 170px;
+    display: block;
+    background: #f5c00c;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.lawyersserv{
+    background: url(../img/bg-light.jpg);
+}
+.lawyersserv2 p{
+    font-size:1.5em;
+}
+.serviceslist{
+    background: url(../img/backgroundserv.png) center/cover;
+}
+.servslist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.servslist-item{
+    position: relative;
+    width: 290px;
+    height: 170px;
+    list-style: none;
+    margin: 15px;
+}
+.servslist-item img{
+    width: 100%;
+    height: 100%;
+}
+.servslist-item span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    letter-spacing: 1.7px;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    padding: 30px 10px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 1.2;
+    padding-top: 15px;
+}
+.servstwocol{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap:25px; 
+}
+.servstwocollist{
+    background-color: white;
+    box-shadow:0 5px 10px -5px black;
+    padding: 10px;
+}
+.titles{
+    background-color:#f5c00c;
+    color: white;
+    padding: 5px;
+}
+.lead{
+    font-size: 1.1em!important;
+}
+
+/*LAWYERS*/
+.lawyerssphoto{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background:url(../img/banner-attorney.jpg);
+    background-size: cover;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 135px;
+    padding-bottom: 20px;
+}
+.lawyerssphoto h1{
+    width: 53.1%;
+    font-weight: 600;
+    line-height: 0.85;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5c00c;
+    font-family: "Hind", sans-serif;
+    font-size: 70px;
+    position: relative;
+    padding-left: 45px;
+}
+.lawyerssphoto h1::before {
+    width: 5px;
+    content: '';
+    height: 170px;
+    display: block;
+    background: #f5c00c;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.servslist-item2{
+    position: relative;
+    width: 290px;
+    height: 220px;
+    list-style: none;
+    margin: 25px;
+}
+.servslist-item2 img{
+    width: 100%;
+    height: 100%;
+}
+.servslist-item2 span{
+    display: block;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 1.5px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 8px 5px;
+    position: relative;
+    border-bottom: 4px solid #f5c00c;
+}
+.servslist-item2 span:hover{
+    color:black;
+    text-decoration:none;
+    background-color: #f5c00c;
+    transition: all ease 0.5s; 
+}
+.lawyerslist{
+    text-align: center!important;
+}
+
+/*PARTNERS*/
+
+.partnersphoto{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background:url(../img/Partners-photo.jpg);
+    background-size: cover;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 135px;
+    padding-bottom: 20px;
+}
+.partnersphoto h1{
+    width: 53.1%;
+    font-weight: 600;
+    line-height: 0.85;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5c00c;
+    font-family: "Hind", sans-serif;
+    font-size: 70px;
+    position: relative;
+    padding-left: 45px;
+}
+.partnersphoto h1::before {
+    width: 5px;
+    content: '';
+    height: 170px;
+    display: block;
+    background: #f5c00c;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+} 
+
+@media screen and (max-width:696px){
+    .servslist li{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 639px){
+    .servphoto h1,.thefirmphoto h1,.lawyerssphoto h1,.partnersphoto h1{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    border-top: 5px solid #f5c00c;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-left: 0;
+    top:40%;
+    }
+    .servphoto h1::before,
+    .thefirmphoto h1::before{
+        display: none;
+    }
+    .lawyerssphoto h1::before,
+    .partnersphoto h1::before{
+        display: none;
+    }
+}
+@media screen and (max-width:1125px){
+    .servslist li{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        width: 40%;
+        height: 40%;
+    }
+    .services .row,.lawyers .row{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap:15px;
+        padding: 3em;
+    }
+    .servsinfo::before{
+        display: none;
+    }
+    .partnersrow{
+        display: grid!important;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap:20px;
+        padding: 0em;
+    }
+    .attsun img{
+        width:100%;
+        height: 80%;
+    }
+    .partnersrow .attsun img{
+        width:100%;
+        height: 80%;
+    } 
+    .partnersab::before{
+        display: none;
+    }
+}
+@media screen and (max-width:1024px){
+    footer .footer-inline img,footer .footer-inline p{
+        display:none;
+    }
+    .texti{
+        text-align: center;
+    }
+    .partnersab::before{
+    display: none;
+    }
+}
+@media screen and (max-width:991px){
+    .servsinfo::before{
+    display: none;
+    }
+    .servslist li{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        width: 70%;
+        height: 70%;
+    }
+    .lawyersattgap .attsun img{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+@media screen and (max-width:924px){
+    .servstwocol{
+        grid-template-columns: 1fr;
+    }
+    nav ul li a{
+        display: none;
+    }
+    #burger{
+        display: block;
+        color: #adaaad;
+        font-size:2em;
+        cursor: pointer;
+    }
+    .phone{
+        transform: translateY(100%);
+    }
+    
+}
+@media screen and (max-width:765px){
+    .aboutus-content::before{
+    display: none;
+    }
+    .lawyersatt::before{
+    display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .lawyers h1{
+        font-size:25px;
+    }
+    .lawyersatt .attsun{
+        padding-bottom: 0px;
+    }
+    #carouselExampleControls img{
+        height: 200px;
+    }
+    .servsinfo h1{
+        font-size: 25px;
+    }
+    .lawyersatt{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .lawyersatt div,.lawyersatt div img{
+        width: 98%;
+        height: 90%;
+    }
+    .servs{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .lawyersattgap{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .lawyersattgap div{
+        margin: auto;
+    }
+    #carouselExampleCaptions{
+        display: none;
+    }
+}
+@media screen and (max-width:620px){
+    .partnersrow{
+        display: grid!important;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap:20px;
+    }
+    .lawyersattgap{
+        grid-template-columns:1fr;
+    }
+    .lawyersattgap div,.lawyersattgap div img{
+       text-align: center;
+       width: 100%;
+       height: 90%;
+    }
+    .phoneunder{
+        display: none;
+    }
+}
+@media screen and (min-width:925px){
+    .menu-btn{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
